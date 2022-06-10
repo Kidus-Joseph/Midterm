@@ -1,7 +1,7 @@
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Pressable } from 'react-native';
 import { useState } from 'react';
+import InputRange from 'react-input-range';
 
 export default function App() {
 
@@ -13,12 +13,11 @@ export default function App() {
     //console.log('clicked')
     const number1 = parseInt(numberText1);
     const number2 = parseInt(numberText2);
-    if (10>number1<20) {
+    if (10>number1<20, 100>number2<200) {
       const squared = number1 + number2 ;
       setMessage(squared.toString())
-    } 
-    else {
-      return `Number 1 should be in [10,20]. Number 2 should be in [100,200]`
+    } else {
+      setMessage('Number 1 should be in [10,20]. Number 2 should be in [100,200]')
     }
   }
   
@@ -44,7 +43,7 @@ export default function App() {
       <View style={styles2.container2}>
         <Button style={styles2.buttonCalculation}
         title='CALCULATE SUM' onPress={calcAddition}/>
-        <TextInput style={styles1.boxInput1}> {message}</TextInput>
+        <TextInput style={styles1.boxInput1}></TextInput>
       <Text style={{color: 'red'}}>The square is {message}</Text>
       </View>
       <StatusBar style="auto" />
