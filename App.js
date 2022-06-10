@@ -1,6 +1,8 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TextInput, Button, Pressable } from 'react-native';
 import { useState } from 'react';
+
 import InputRange from 'react-input-range';
 
 export default function App() {
